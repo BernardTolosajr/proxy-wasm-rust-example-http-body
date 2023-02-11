@@ -1,0 +1,13 @@
+services:
+  envoy:
+    image: envoyproxy/envoy:v1.24-latest
+    hostname: envoy
+    ports:
+      - "18000:18000"
+    volumes:
+      - ./envoy.yaml:/etc/envoy/envoy.yaml
+      - ./target/wasm32-wasi/release:/etc/envoy/proxy-wasm-plugins
+    networks:
+      - envoymesh
+networks:
+  envoymesh: {}
