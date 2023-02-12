@@ -1,5 +1,3 @@
-use std::f32::consts::E;
-
 use proxy_wasm::traits::*;
 use proxy_wasm::types::*;
 use log::info;
