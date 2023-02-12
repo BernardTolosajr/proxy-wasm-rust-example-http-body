@@ -32,6 +32,10 @@ static_resources:
                       value:
                         config:
                           name: "http_body"
+                          configuration:
+                            "@type": "type.googleapis.com/google.protobuf.StringValue"
+                            value: |
+                              {"key":"foo"}
                           vm_config:
                             runtime: "envoy.wasm.runtime.v8"
                             code:
