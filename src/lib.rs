@@ -58,8 +58,8 @@ impl Context for HttpBody {
 }
 
 impl HttpBody {
-    fn validate_payload(&mut self, json_value: &json::JsonValue) -> bool {
-        json_value.has_key("foo")
+    fn validate_payload(&mut self, json_value: &json::JsonValue) -> bool { 
+        json_value.has_key(self.configuration.key.as_str())
     }
 }
 
